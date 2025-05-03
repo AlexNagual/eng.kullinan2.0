@@ -1,189 +1,200 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ms. Kamila - Преподаватель английского языка</title>
-        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <!-- Подключаем Font Awesome для иконок -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-      </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ms. Kamila - Преподаватель английского языка</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
 <body>
 
+<header>
+  <div class="logo">
+    <img src="images/diamond-logo.png" alt="Logo">
+    Eng. Kullinan
+  </div>
+  <div class="menu" onclick="toggleMenu()">&#9776;</div>
+</header>
 
-  <header>
-    <div class="logo">
-      <img src="images/diamond-logo.png" alt="Logo">
-      Eng. Kullinan
-    </div>
-    <div class="menu" onclick="toggleMenu()">&#9776;</div>
-  </header>
+<nav id="mobile-menu">
+  <a href="#about" onclick="toggleMenu()">Обо мне</a>
+  <a href="#courses" onclick="toggleMenu()">Курсы</a>
+  <a href="#certificates" onclick="toggleMenu()">Сертификаты</a>
+  <a href="#students" onclick="toggleMenu()">Ученики</a>
+  <a href="#reviews" onclick="toggleMenu()">Отзывы</a>
+</nav>
 
 <div class="wrapper">
 
-  <nav id="mobile-menu">
-    <a href="#about" onclick="toggleMenu()">Обо мне</a>
-    <a href="#courses" onclick="toggleMenu()">Курсы</a>
-    <a href="#certificates" onclick="toggleMenu()">Сертификаты</a>
-    <a href="#students" onclick="toggleMenu()">Ученики</a>
-    <a href="#reviews" onclick="toggleMenu()">Отзывы</a>
-  </nav>
+  <div class="container">
+    <section class="hero">
+      <img src="images/kamila-portrait.png" alt="Ms Kamila">
+      <h1>Ms. Kamila</h1>
+      <p>Привет! Я преподаватель английского языка. Уроки с индивидуальным подходом, где каждое занятие уникально.</p>
+      <p>Запишитесь, и начнём учёбу!</p>
+      <button onclick="openTelegram()">Записаться</button>
+    </section>
+  </div>
 
-  <section class="hero">
-    <img src="images/kamila-portrait.png" alt="Ms Kamila">
-    <h1>Ms. Kamila</h1>
-    <p>Приветствую Вас!</p>
-    <p>Я преподаватель Английского,
-        неравнодушный к креативным и эффективным урокам.
-        Каждый урок неповторим,
-        к каждому ученику индивидуальный подход.</p>
-
-    <button onclick="scrollToForm()">Записаться</button>
-  </section>
-
-  <section class="stats">
-    <div class="stat-item">
-      <i class="fas fa-graduation-cap stat-icon"></i>
-      <div>10+ лет<br>опыта</div>
-    </div>
-    <div class="stat-item">
-      <i class="fas fa-users stat-icon"></i>
-      <div>1000+<br>учеников</div>
-    </div>
-    <div class="stat-item">
-      <i class="fas fa-language stat-icon"></i>
-      <div>3 языка</div>
-    </div>
-  </section>
-
-  <section class="about" id="about">
-    <div class="tabs">
-      <div class="tab active" onclick="showTab(0)">Образование</div>
-      <div class="tab" onclick="showTab(1)">Опыт работы</div>
-      <div class="tab" onclick="showTab(2)">Онлайн обучение</div>
-    </div>
-    <div class="tab-content" id="tab-content">
-      <img id="tab-image" src="images/about/graduate.png" alt="Образование" style="width: 100%; border-radius: 10px; margin-bottom: 15px;">
-      <h2 id="tab-title">Образование</h2>
-      <ul id="tab-list">
-        <li><span class="check-icon">✔</span> Специализированная школа для одарённых детей</li>
-        <li><span class="check-icon">✔</span> Hertfordshire Independent Boarding School (Англия)</li>
-        <li><span class="check-icon">✔</span> Бакалавр: английский и китайский языки</li>
-        <li><span class="check-icon">✔</span> Магистр педагогических наук</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="courses-section" id="courses">
-    <div class="courses-container">
-      <div class="courses-header">
-        <h2>Выбери свой курс</h2>
+  <div class="container">
+    <section class="stats">
+      <div class="stat-item">
+        <i class="fas fa-graduation-cap stat-icon"></i>
+        <div>10+ лет<br>опыта</div>
       </div>
-      <div class="courses-list">
-        <div class="course">
-          <img src="images/group-lessons.png" alt="Групповые занятия">
-          <h3 class="course-title">Групповые занятия</h3>
-          <p class="course-description">Учитесь в мини-группах с учениками вашего уровня. Много общения и практики.</p>
-          <p class="course-price">7500 ₽ / месяц</p>
-          <a href="#contact" class="course-button">Выбрать</a>
-        </div>
+      <div class="stat-item">
+        <i class="fas fa-users stat-icon"></i>
+        <div>1000+<br>учеников</div>
+      </div>
+      <div class="stat-item">
+        <i class="fas fa-language stat-icon"></i>
+        <div>3 языка</div>
+      </div>
+    </section>
+  </div>
 
-        <div class="course">
-          <img src="images/individual-lessons.png" alt="Индивидуальные занятия">
-          <h3 class="course-title">Индивидуальные занятия</h3>
-          <p class="course-description">Персональная программа обучения. Максимальное внимание вашим целям.</p>
-          <p class="course-price">10000 ₽ / месяц</p>
-          <a href="#contact" class="course-button">Выбрать</a>
+  <div class="container">
+    <section class="about" id="about">
+      <div class="tabs">
+        <div class="tab active" onclick="showTab(0)">Образование</div>
+        <div class="tab" onclick="showTab(1)">Опыт работы</div>
+        <div class="tab" onclick="showTab(2)">Онлайн обучение</div>
+      </div>
+      <div class="tab-content" id="tab-content">
+        <div class="tab-image-wrapper">
+          <img id="tab-image" src="images/about/graduate.png" alt="Образование">
         </div>
-
-        <div class="course">
-          <img src="images/ielts-prep.png" alt="Подготовка к IELTS">
-          <h3 class="course-title">Подготовка к IELTS</h3>
-          <p class="course-description">Интенсивная подготовка ко всем частям экзамена. Стратегии, практика, уверенность.</p>
-          <p class="course-price">10000 ₽ / месяц</p>
-          <a href="#contact" class="course-button">Выбрать</a>
+        <div class="tab-text-wrapper">
+          <h2 id="tab-title">Образование</h2>
+          <ul id="tab-list">
+            <li><span class="check-icon">✔</span> Специализированная школа для одарённых детей</li>
+            <li><span class="check-icon">✔</span> Hertfordshire Independent Boarding School (Англия)</li>
+            <li><span class="check-icon">✔</span> Бакалавр: английский и китайский языки</li>
+            <li><span class="check-icon">✔</span> Магистр педагогических наук</li>
+          </ul>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
-  <section class="certificates" id="certificates">
-    <h2>Сертификаты</h2>
-    <div class="certificates-grid">
-      <img src="images/certificates/cert0.png" alt="Certificate 0" onclick="openImage(this.src)">
-      <img src="images/certificates/cert1.png" alt="Certificate 1" onclick="openImage(this.src)">
-      <img src="images/certificates/cert2.png" alt="Certificate 2" onclick="openImage(this.src)">
-      <img src="images/certificates/cert3.png" alt="Certificate 3" onclick="openImage(this.src)">
-      <img src="images/certificates/cert4.png" alt="Certificate 4" onclick="openImage(this.src)">
-      <img src="images/certificates/cert5.png" alt="Certificate 5" onclick="openImage(this.src)">
-      <img src="images/certificates/cert6.png" alt="Certificate 6" onclick="openImage(this.src)">
-      <img src="images/certificates/cert7.png" alt="Certificate 7" onclick="openImage(this.src)">
-      <img src="images/certificates/cert8.png" alt="Certificate 8" onclick="openImage(this.src)">
-    </div>
-  </section>
-
-  <section class="students-map" id="students">
-    <h2>Карта моих учеников</h2>
-    <div class="map-container">
-      <img src="images/map.png" alt="Карта мира" class="world-map">
-    </div>
-    <p class="map-description">
-      Среди моих учеников ребята из Казахстана, России, Монголии, Узбекистана, Киргизии, Эстонии, Испании, Польши, Финляндии, Южной Кореи, Армении, Турции, Аргентины, Бразилии и Африки.
-    </p>
-  </section>
-
-  <section class="reviews" id="reviews">
-    <h2>Отзывы учеников</h2>
-    <div class="reviews-container">
-      <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-
-      <div class="slider-wrapper">
-        <div class="reviews-slider" id="reviews-slider">
-          <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p class="review-text">Благодаря Камиле я сдал IELTS на высокий балл!</p>
+  <div class="container">
+    <section class="courses-section" id="courses">
+      <div class="courses-container">
+        <div class="courses-header">
+          <h2>Выбери свой курс</h2>
+        </div>
+        <div class="courses-list">
+          <div class="course">
+            <img src="images/group-lessons.png" alt="Групповые занятия">
+            <h3 class="course-title">Групповые занятия</h3>
+            <p class="course-description">Учитесь в мини-группах с учениками вашего уровня. Много общения и практики.</p>
+            
+            <a href="#contact" class="course-button">Выбрать</a>
           </div>
-          <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p class="review-text">Уроки проходят весело и легко. Камила объясняет понятно!</p>
+          <div class="course">
+            <img src="images/individual-lessons.png" alt="Индивидуальные занятия">
+            <h3 class="course-title">Индивидуальные занятия</h3>
+            <p class="course-description">Персональная программа обучения. Максимальное внимание вашим целям.</p>
+            
+            <a href="#contact" class="course-button">Выбрать</a>
           </div>
-          <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p class="review-text">Очень нравится, что много практики на разговор!</p>
-          </div>
-          <div class="review-card">
-            <div class="stars">★★★★★</div>
-            <p class="review-text">Благодаря Камиле я сдал IELTS на высокий балл!</p>
+          <div class="course">
+            <img src="images/ielts-prep.png" alt="Подготовка к IELTS">
+            <h3 class="course-title">Подготовка к IELTS</h3>
+            <p class="course-description">Интенсивная подготовка ко всем частям экзамена. Стратегии, практика, уверенность.</p>
+            
+            <a href="#contact" class="course-button">Выбрать</a>
           </div>
         </div>
       </div>
+    </section>
+  </div>
 
-      <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-  </section>
+  <div class="container">
+    <section class="certificates" id="certificates">
+      <h2>Сертификаты</h2>
+      <div class="main-certificate">
+        <img id="main-cert-image" src="images/certificates/cert0.png" alt="Основной сертификат">
+      </div>
+      <div class="thumbnail-row">
+        <img src="images/certificates/cert0.png" onclick="changeCertificate(this.src)" alt="Thumbnail 0">
+        <img src="images/certificates/cert1.png" onclick="changeCertificate(this.src)" alt="Thumbnail 1">
+        <img src="images/certificates/cert2.png" onclick="changeCertificate(this.src)" alt="Thumbnail 2">
+        <img src="images/certificates/cert3.png" onclick="changeCertificate(this.src)" alt="Thumbnail 3">
+        <img src="images/certificates/cert4.png" onclick="changeCertificate(this.src)" alt="Thumbnail 4">
+        <img src="images/certificates/cert5.png" onclick="changeCertificate(this.src)" alt="Thumbnail 5">
+        <img src="images/certificates/cert6.png" onclick="changeCertificate(this.src)" alt="Thumbnail 6">
+        <img src="images/certificates/cert7.png" onclick="changeCertificate(this.src)" alt="Thumbnail 7">
+        <img src="images/certificates/cert8.png" onclick="changeCertificate(this.src)" alt="Thumbnail 8">
+      </div>
+    </section>
+  </div>
+
+  <div class="container">
+    <section class="students-map" id="students">
+      <h2>Карта моих учеников</h2>
+      <div class="map-container">
+        <img src="images/map.png" alt="Карта мира" class="world-map">
+      </div>
+      <p class="map-description">
+        Среди моих учеников ребята из Казахстана, России, Монголии, Узбекистана, Киргизии, Эстонии, Испании, Польши, Финляндии, Южной Кореи, Армении, Турции, Аргентины, Бразилии и Африки.
+      </p>
+    </section>
+  </div>
+
+  <div class="container">
+    <section class="reviews" id="reviews">
+      <h2>Отзывы учеников</h2>
+      <div class="reviews-container">
+        <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+        <div class="slider-wrapper" id="review-slider-wrapper">
+          <div class="reviews-slider" id="reviews-slider">
+            <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Благодаря Камиле я сдал IELTS на высокий балл!</p>
+            </div>
+            <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Уроки проходят весело и легко. Камила объясняет понятно!</p>
+            </div>
+            <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Очень нравится, что много практики на разговор!</p>
+            </div>
+            <div class="review-card">
+              <div class="stars">★★★★★</div>
+              <p class="review-text">Занятия всегда интересные, материал подбирается под меня.</p>
+            </div>
+          </div>
+        </div>
+        <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </section>
+  </div>
+
 </div>
 
 <footer class="footer" id="contact">
-    <div class="footer-content">
-      <h2>Свяжитесь со мной</h2>
-      <div class="footer-buttons">
-        <a href="https://wa.me/+79234407860" target="_blank" class="footer-button whatsapp">WhatsApp</a>
-        <a href="https://t.me/alex_nagual" target="_blank" class="footer-button telegram">Telegram</a>
-        <a href="https://www.instagram.com/eng.kullinan" target="_blank" class="footer-button instagram">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-      </div>
-      <p class="footer-copy">© 2025 Ms. Kamila. Все права защищены.</p>
+  <div class="footer-content">
+    <h2>Свяжитесь со мной</h2>
+    <div class="footer-buttons">
+      <a href="#" class="footer-button whatsapp" onclick="openWhatsApp()">WhatsApp</a>
+      <a href="#" class="footer-button telegram" onclick="openTelegram()">Telegram</a>
+      <a href="https://www.instagram.com/eng.kullinan" target="_blank" class="footer-button instagram">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
     </div>
-  </footer>
+    <p class="footer-copy">© 2025 Ms. Kamila. Все права защищены.</p>
+  </div>
+</footer>
 
 <div id="lightbox">
   <img id="lightbox-img" src="">
 </div>
 
 <script src="js/script.js"></script>
-
 </body>
 </html>
